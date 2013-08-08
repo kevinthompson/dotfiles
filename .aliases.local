@@ -1,0 +1,10 @@
+# Generic
+alias ae="v ~/.aliases.local"
+
+# Git
+alias gs="git status"
+alias gps="git push"
+alias gpl="git pull"
+alias gb="git branch"
+alias gf="git fetch"
+alias gd="git diff"
