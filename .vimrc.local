@@ -1,3 +1,28 @@
+" Color Scheme
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
+
+" Tmux
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format documentation {spec}\n")'
+
+" Bindings
+map <Leader>a :call RunAllSpecs()<CR>
+
+"" Gvim
+nmap <buffer> <M-r> <Plug>(xmpfilter-run)
+xmap <buffer> <M-r> <Plug>(xmpfilter-run)
+imap <buffer> <M-r> <Plug>(xmpfilter-run)
+
+nmap <buffer> <M-m> <Plug>(xmpfilter-mark)
+xmap <buffer> <M-m> <Plug>(xmpfilter-mark)
+imap <buffer> <M-m> <Plug>(xmpfilter-mark)
+
+"Terminal
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)

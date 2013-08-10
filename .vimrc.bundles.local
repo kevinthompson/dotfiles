@@ -1,1 +1,3 @@
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'christoomey/vim-tmux-navigator'
