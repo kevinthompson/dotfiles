@@ -9,6 +9,7 @@ alias gb="git branch"
 alias gf="git fetch"
 alias gd="git diff"
 alias gap="git add -p"
+alias gc="git commit"
 
 # Rails
 alias lg="tail -f log/development.log"
