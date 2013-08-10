@@ -8,3 +8,6 @@ alias gpl="git pull"
 alias gb="git branch"
 alias gf="git fetch"
 alias gd="git diff"
+
+# Rails
+alias lg="tail -f log/development.log"
