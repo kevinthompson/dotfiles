@@ -13,3 +13,5 @@ alias gc="git commit"
 
 # Rails
 alias lg="tail -f log/development.log"
+
+alias c="clear"
