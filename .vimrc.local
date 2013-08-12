@@ -1,5 +1,8 @@
 " Settings
 set nowrap
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 " Color Scheme
 set background=dark
@@ -35,3 +38,4 @@ imap <buffer> <F4> <Plug>(xmpfilter-mark)
 
 " Auto Commands
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd QuickFixCmdPost *grep* cwindow

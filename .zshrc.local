@@ -1,3 +1,4 @@
 [[ -f ~/.ssh/pco_servers ]] && ssh-add ~/.ssh/pco_servers
 eval "$(rbenv init - zsh)"
 eval "$(hub alias -s)"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"

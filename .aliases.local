@@ -1,5 +1,6 @@
 # Generic
 alias ae="v ~/.aliases.local"
+alias zr="source ~/.zlogin && source ~/.zshrc"
 
 # Git
 alias gs="git status"
@@ -10,8 +11,11 @@ alias gf="git fetch"
 alias gd="git diff"
 alias gap="git add -p"
 alias gc="git commit"
+alias gco="git checkout"
+alias gpr="git pull-request"
 
 # Rails
 alias lg="tail -f log/development.log"
+alias be="bundle exec"
 
 alias c="clear"
