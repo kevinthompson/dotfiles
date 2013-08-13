@@ -1,5 +1,6 @@
 " Settings
 set nowrap
+set hidden
 if $TMUX == ''
   set clipboard+=unnamed
 endif

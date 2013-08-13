@@ -13,6 +13,8 @@ alias gap="git add -p"
 alias gc="git commit"
 alias gco="git checkout"
 alias gpr="git pull-request"
+alias gbr="git browse"
+alias gl="git log --pretty=oneline --abbrev-commit"
 
 # Rails
 alias lg="tail -f log/development.log"
