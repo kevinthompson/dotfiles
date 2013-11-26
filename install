@@ -1,7 +1,11 @@
 #!/bin/bash
 
 cd ~/.dotfiles
-for file in $(git ls-files); do
-  echo "Creating symlink to $file in home directory."
+
+files=$(git ls-files | grep -v "install$")
+
+for file in $files; do
+  if [[ -L ~/$file ]]; then rm ~/$file; fi
+  echo "Creating symlink to $file in home directory..."
   ln -s ~.dotfiles/$file ~/$file
 done
