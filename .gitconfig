@@ -1,0 +1,14 @@
+[push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  up = !git fetch origin && git rebase origin/master
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[user]
+  name = Kevin Thompson
+  email = kevin@kevinthompson.info
+[github]
+  user = kevinthompson

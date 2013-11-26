@@ -1,3 +1,0 @@
-[submodule "vendor/thoughtbot"]
-	path = vendor/thoughtbot
-	url = https://github.com/thoughtbot/dotfiles

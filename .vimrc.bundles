@@ -1,0 +1,55 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle Itself
+Bundle 'gmarik/vundle'
+
+" Performance
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+" Utilities
+Bundle 'bling/vim-airline'
+Bundle 'danro/rename.vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/tComment'
+Bundle 'vim-scripts/ctags.vim'
+
+" Syntax Highlighting
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/syntastic'
+
+" Syntax Support
+Bundle 'chooh/brightscript.vim'
+Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'slim-template/vim-slim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
+
+" Ruby
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+" Tmux
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'jgdavey/tslime.vim'
+
+filetype on

@@ -1,0 +1,55 @@
+# Unix
+alias zr="source ~/.zlogin && source ~/.zshrc"
+alias e="$EDITOR"
+alias v="$VISUAL"
+alias ae="v ~/.aliases.local"
+alias c="clear"
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias mkdir='mkdir -p'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
+
+# Bundler
+alias b="bundle"
+alias be="bundle exec"
+
+# Rubygems
+alias gi="gem install"
+alias giv="gem install -v"
+
+# Rails
+alias lg="tail -f log/development.log"
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias m="migrate"
+alias s="rspec"
+
+# Git
+alias gs="git status"
+alias gps="git push"
+alias gpl="git pull"
+alias gb="git branch"
+alias gf="git fetch"
+alias gd="git diff"
+alias gap="git add -p"
+alias gc="git commit"
+alias gco="git checkout"
+alias gpr="git pull-request"
+alias gbr="git browse"
+alias gl="git log --pretty=oneline --abbrev-commit"
+
+# Tmux
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tl="tmux ls"
+alias tk="tmux kill-session -t"
+
+# Apache
+alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
+
+# Commands
+eval "$(rbenv init - zsh)"
+eval "$(hub alias -s)"

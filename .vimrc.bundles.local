@@ -1,7 +1,0 @@
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'bling/vim-airline'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'ack.vim'
-

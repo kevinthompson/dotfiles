@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ~/.dotfiles
+for file in $(git ls-files); do
+  echo "Creating symlink to $file in home directory."
+  ln -s ~.dotfiles/$file ~/$file
+done
