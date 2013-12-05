@@ -23,6 +23,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/tComment'
 Bundle 'vim-scripts/ctags.vim'
+Bundle 'editorconfig/editorconfig-vim'
 
 " Syntax Highlighting
 Bundle 'altercation/vim-colors-solarized'
@@ -33,7 +34,6 @@ Bundle 'chooh/brightscript.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 

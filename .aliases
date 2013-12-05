@@ -2,7 +2,7 @@
 alias zr="source ~/.zlogin && source ~/.zshrc"
 alias e="$EDITOR"
 alias v="$VISUAL"
-alias ae="v ~/.aliases.local"
+alias ae="v ~/.aliases"
 alias c="clear"
 alias l='ls'
 alias ll='ls -al'
@@ -40,6 +40,8 @@ alias gco="git checkout"
 alias gpr="git pull-request"
 alias gbr="git browse"
 alias gl="git log --pretty=oneline --abbrev-commit"
+alias staging="gco staging; gf; git reset --hard origin/staging"
+alias master="gco master; gf; git reset --hard origin/master"
 
 # Tmux
 alias tn="tmux new -s"
@@ -50,6 +52,3 @@ alias tk="tmux kill-session -t"
 # Apache
 alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
 
-# Commands
-eval "$(rbenv init - zsh)"
-eval "$(hub alias -s)"
