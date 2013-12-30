@@ -1,4 +1,5 @@
 # Path
+fpath=(~/code/zsh-completions/src $fpath)
 export GOPATH="/Users/kevinthompson/code/go"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"  # Standard Path
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"        # Homebrew

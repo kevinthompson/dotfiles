@@ -51,4 +51,3 @@ alias tk="tmux kill-session -t"
 
 # Apache
 alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
-

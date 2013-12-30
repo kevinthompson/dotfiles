@@ -180,3 +180,8 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+" Go Lang
+" =============================
+set runtimepath+=$GOROOT/misc/vim
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
