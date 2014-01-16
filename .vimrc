@@ -94,6 +94,13 @@ function! StripTrailingWhitespace()
   %s/\s\+$//e
 endfun
 
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
 
 
 " Bindings
@@ -114,6 +121,7 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <leader><leader> <c-^>
 
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+nnoremap <C-n> :call NumberToggle()<cr>
 
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>h :noh<CR>
@@ -139,6 +147,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " Remove Trailing Whitespace
 autocmd BufWritePre * call StripTrailingWhitespace()
+
+" Relative Numbers
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 augroup vimrcEx
   autocmd!
@@ -180,6 +192,7 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
 
 " Go Lang
 " =============================
