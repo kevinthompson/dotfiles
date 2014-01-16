@@ -1,5 +1,11 @@
+# Functions
+fpath=(/Users/kevinthompson/code/zsh-completions/src $fpath)
+
+# Enable Completion
+autoload -U compinit
+compinit
+
 # Path
-fpath=(~/code/zsh-completions/src $fpath)
 export GOPATH="/Users/kevinthompson/code/go"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"  # Standard Path
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"        # Homebrew
@@ -14,10 +20,6 @@ export EDITOR=$VISUAL
 # Commands
 eval "$(rbenv init - zsh)"
 eval "$(hub alias -s)"
-
-# Enable Completion
-autoload -U compinit
-compinit
 
 # Enable Colors
 autoload -U colors
