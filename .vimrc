@@ -18,7 +18,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 colorscheme solarized
 
-" use the silver searcher https://github.com/ggreer/the_silver_searcher
+" Use the Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -77,12 +77,12 @@ function! ToggleBackground()
   execute "!reattach-to-user-namespace profile " . ( &background == "dark"? "dark" : "light" )
 endfunction
 
-function! InsertTabWrapper()
+function! AutocompleteTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
-      return "\<tab>"
+    return "\<tab>"
   else
-      return "\<c-p>"
+    return "\<c-p>"
   endif
 endfunction
 
@@ -106,39 +106,37 @@ endfunc
 " Bindings
 " ==============================
 
-" Quicker window movement
+" Window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" vim-rspec mappings
+" Rspec
+nnoremap <Leader>a :call RunAllSpecs()<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
-" switch between last two files
+" Switch between last two files
 nnoremap <leader><leader> <c-^>
 
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+" Toggle Relative/Absolute numbers
 nnoremap <C-n> :call NumberToggle()<cr>
+noremap <silent> <F12> :call ToggleBackground()<CR><CR>
 
-map <Leader>a :call RunAllSpecs()<CR>
+" Inline Ruby Processing
+noremap <buffer> <F5> <Plug>(xmpfilter-run)
+noremap <buffer> <F4> <Plug>(xmpfilter-mark)
+
+" Tab Completion
+inoremap <Tab> <c-r>=AutocompleteTabWrapper()<cr>
+inoremap <s-Tab> <c-r>=snipMate#TriggerSnippet()<cr>
+snoremap <s-Tab> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+
 map <Leader>h :noh<CR>
 map <Leader>ct :!ctags -R .<CR>
 map <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>:noh<CR>
-
-nmap <buffer> <F5> <Plug>(xmpfilter-run)
-xmap <buffer> <F6> <Plug>(xmpfilter-run)
-imap <buffer> <F5> <Plug>(xmpfilter-run)
-
-nmap <buffer> <F4> <Plug>(xmpfilter-mark)
-xmap <buffer> <F4> <Plug>(xmpfilter-mark)
-imap <buffer> <F4> <Plug>(xmpfilter-mark)
-
-nmap <silent> <F12> :call ToggleBackground()<CR><CR>
-imap <silent> <F12> :call ToggleBackground()<CR><CR>
-vmap <silent> <F12> :call ToggleBackground()<CR><CR>
 
 
 " Auto Commands
