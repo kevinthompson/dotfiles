@@ -2,7 +2,7 @@
 
 cd ~/.dotfiles
 
-files=$(git ls-files | grep -v "install$")
+files=$(git ls-tree HEAD | cut -f2 | grep -v "install$")
 
 for file in $files; do
   if [[ -L ~/$file ]]; then rm ~/$file; fi
