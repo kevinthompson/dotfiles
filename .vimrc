@@ -103,42 +103,6 @@ function! NumberToggle()
 endfunc
 
 
-" Bindings
-" ==============================
-
-" Window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-
-" Rspec
-nnoremap <Leader>a :call RunAllSpecs()<CR>
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-
-" Switch between last two files
-nnoremap <leader><leader> <c-^>
-
-" Toggle Relative/Absolute numbers
-nnoremap <C-n> :call NumberToggle()<cr>
-noremap <silent> <F12> :call ToggleBackground()<CR><CR>
-
-" Inline Ruby Processing
-noremap <buffer> <F5> <Plug>(xmpfilter-run)
-noremap <buffer> <F4> <Plug>(xmpfilter-mark)
-
-" Tab Completion
-inoremap <Tab> <c-r>=AutocompleteTabWrapper()<cr>
-inoremap <s-Tab> <c-r>=snipMate#TriggerSnippet()<cr>
-snoremap <s-Tab> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
-
-map <Leader>h :noh<CR>
-map <Leader>ct :!ctags -R .<CR>
-map <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>:noh<CR>
-
-
 " Auto Commands
 " ==============================
 autocmd QuickFixCmdPost *grep* cwindow
@@ -196,3 +160,10 @@ endif
 " =============================
 set runtimepath+=$GOROOT/misc/vim
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+
+" Bindings
+" ==============================
+if filereadable(expand("~/.vimrc.bindings"))
+  source ~/.vimrc.bindings
+endif
