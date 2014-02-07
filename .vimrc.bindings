@@ -6,6 +6,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" Navigation
+nnoremap <Leader>[ :tp<CR>
+nnoremap <Leader>] :tn<CR>
+
+" Switch between last two files
+nnoremap <leader><leader> <C-^>
 
 " Rspec
 nnoremap <Leader>a :call RunAllSpecs()<CR>
@@ -13,24 +22,30 @@ nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
-" Switch between last two files
-nnoremap <leader><leader> <c-^>
-
 " Toggle Relative/Absolute numbers
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-n> :call NumberToggle()<CR>
 noremap <silent> <F12> :call ToggleBackground()<CR><CR>
 
 " Inline Ruby Processing
-noremap <buffer> <F5> <Plug>(xmpfilter-run)
-noremap <buffer> <F4> <Plug>(xmpfilter-mark)
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F6> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
 
 " Tab Completion
-inoremap <Tab> <c-r>=AutocompleteTabWrapper()<cr>
-inoremap <s-Tab> <c-r>=snipMate#TriggerSnippet()<cr>
-snoremap <s-Tab> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+inoremap <Tab> <C-r>=AutocompleteTabWrapper()<CR>
+inoremap <S-Tab> <C-r>=snipMate#TriggerSnippet()<CR>
+snoremap <S-Tab> <esc>i<right><C-r>=snipMate#TriggerSnippet()<CR>
 
+" Misc.
 map <Leader>h :noh<CR>
 map <Leader>ct :!ctags -R .<CR>
 map <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>:noh<CR>
 map <Leader>' cs"'
-map <Leader>be :e ~/.vimrc.bindings<CR>
+map <Leader>eb :e ~/.vimrc.bindings<CR>
+map <Leader>ev :e ~/.vimrc<CR>
+map <Leader>gb :Gbrowse<CR>
+map <Leader><Return> :e ~/tmp/scratch<CR>

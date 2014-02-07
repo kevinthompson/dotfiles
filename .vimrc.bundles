@@ -1,30 +1,17 @@
 set nocompatible
-
 filetype off
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle Itself
 Bundle 'gmarik/vundle'
 
-" Performance
+" Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-
-" Utilities
-Bundle 'bling/vim-airline'
-Bundle 'danro/rename.vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'vim-scripts/tComment'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'editorconfig/editorconfig-vim'
 
 " Syntax Highlighting
 Bundle 'altercation/vim-colors-solarized'
@@ -55,5 +42,17 @@ Bundle "jnwhiteh/vim-golang.git"
 " Tmux
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
+
+" Utilities
+Bundle 'bling/vim-airline'
+Bundle 'danro/rename.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/tComment'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'editorconfig/editorconfig-vim'
 
 filetype on
