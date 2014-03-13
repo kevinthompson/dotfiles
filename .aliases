@@ -1,3 +1,7 @@
+# Commands
+eval "$(rbenv init - zsh)"
+eval "$(gh alias -s)"
+
 # Unix
 alias zr="source ~/.zlogin && source ~/.zshrc"
 alias e="$EDITOR"
@@ -8,10 +12,6 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 alias mkdir='mkdir -p'
-alias -g G='| grep'
-alias -g M='| less'
-alias -g L='| wc -l'
-alias -g ONE="| awk '{ print \$1}'"
 
 # Bundler
 alias b="bundle"
