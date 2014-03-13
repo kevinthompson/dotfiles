@@ -19,7 +19,7 @@ export EDITOR=$VISUAL
 
 # Commands
 eval "$(rbenv init - zsh)"
-eval "$(hub alias -s)"
+eval "$(gh alias -s)"
 
 # Enable Colors
 autoload -U colors
