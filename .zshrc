@@ -5,21 +5,8 @@ fpath=(/Users/kevinthompson/code/zsh-completions/src $fpath)
 autoload -U compinit
 compinit
 
-# Path
-export GOPATH="/Users/kevinthompson/code/go"
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"  # Standard Path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"        # Homebrew
-export PATH="/usr/local/share/npm/bin:$PATH"              # Node
-export PATH="$GOPATH/bin:$PATH"                           # Go
-export PATH="$HOME/.bin:$PATH"                            # Custom Binaries
-
-# Define Editor
-export VISUAL=vim
-export EDITOR=$VISUAL
-
-# Commands
-eval "$(rbenv init - zsh)"
-eval "$(gh alias -s)"
+# Environment
+[[ -f ~/.environment ]] && source ~/.environment
 
 # Enable Colors
 autoload -U colors
