@@ -9,8 +9,8 @@ if [ -f ~/.aliases ]; then
 fi
 
 # Completion
-if [ -f /etc/bash_completion ]; then
-  . /etc/bash_completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 
 # Prompt
