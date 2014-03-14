@@ -1,6 +1,6 @@
 " Settings
 " ==============================
-runtime macros/matchit.vim
+nnoremap <SPACE> <Nop>
 
 " Packages
 if filereadable(expand("~/.vimrc.bundles"))
