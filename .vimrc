@@ -59,6 +59,9 @@ set splitbelow
 set splitright
 set tabstop=2
 set wildmode=list:longest,list:full
+set textwidth=80
+set colorcolumn=+1
+hi ColorColumn ctermbg=8
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
