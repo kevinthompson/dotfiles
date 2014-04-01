@@ -8,5 +8,6 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 zeus.json
+.powder
 .vim/bundle
 .vim/doc
