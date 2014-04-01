@@ -49,19 +49,16 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A"
 
-# Prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
-
 # Git Prompt
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+    echo " (%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%})"
   fi
 }
 
 # Prompt
-export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info) %{$fg_bold[blue]%}$ %{$reset_color%}'
 
 # Change iTerm2 Profile
 profile() { echo -e "\033]50;SetProfile=$1\a" }
