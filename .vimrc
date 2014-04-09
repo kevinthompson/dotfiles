@@ -71,15 +71,6 @@ set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitigno
 
 " Functions
 " ==============================
-function! ToggleBackground()
-  let &background = ( &background == "dark"? "light" : "dark" )
-  if exists("g:colors_name")
-    exe "colorscheme " . g:colors_name
-  endif
-  silent !clear
-  execute "!reattach-to-user-namespace profile " . ( &background == "dark"? "dark" : "light" )
-endfunction
-
 function! AutocompleteTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -100,6 +91,7 @@ endfun
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
+    set norelativenumber
   else
     set relativenumber
   endif

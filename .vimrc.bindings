@@ -24,7 +24,6 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 
 " Toggle Relative/Absolute numbers
 nnoremap <C-n> :call NumberToggle()<CR>
-noremap <silent> <F12> :call ToggleBackground()<CR><CR>
 
 " Inline Ruby Processing
 nmap <buffer> <F5> <Plug>(xmpfilter-run)
