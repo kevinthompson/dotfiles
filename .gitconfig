@@ -6,6 +6,7 @@
   ui = auto
 [alias]
   up = !git fetch origin && git rebase origin/master
+  template = !git clone --depth 1 --origin source
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
