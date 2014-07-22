@@ -39,6 +39,7 @@ let g:snippetsEmu_key = "<S-Tab>"
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 set background=dark
 set complete=.,w,t
