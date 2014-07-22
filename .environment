@@ -14,3 +14,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 
 # Go
 export GOPATH="/Users/kevinthompson/code/go"
+
+# QT
+export Qt5Widgets_DIR=/usr/local/Cellar/qt5/5.3.0/lib/cmake/Qt5Widgets/
+export Qt5Network_DIR=/usr/local/Cellar/qt5/5.3.0/lib/cmake/Qt5Network/
