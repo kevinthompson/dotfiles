@@ -41,6 +41,7 @@ let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
+set guifont=Monaco:h12
 set background=dark
 set complete=.,w,t
 set expandtab

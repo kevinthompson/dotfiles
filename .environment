@@ -1,9 +1,10 @@
 # Path
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"  # Standard Path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"        # Homebrew
-export PATH="/usr/local/share/npm/bin:$PATH"              # Node
-export PATH="$GOPATH/bin:$PATH"                           # Go
-export PATH="$HOME/.bin:$PATH"                            # Custom Binaries
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"      # Standard Path
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"            # Homebrew
+export PATH="$HOME/code/android-sdk/sdk/platform-tools:$PATH" # Homebrew
+export PATH="/usr/local/share/npm/bin:$PATH"                  # Node
+export PATH="$GOPATH/bin:$PATH"                               # Go
+export PATH="$HOME/.bin:$PATH"                                # Custom Binaries
 
 # Define Editor
 export VISUAL=vim
