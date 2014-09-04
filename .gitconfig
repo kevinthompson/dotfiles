@@ -7,6 +7,8 @@
 [alias]
   up = !git fetch origin && git rebase origin/master
   template = !git clone --depth 1 --origin source
+  today = !git log --since="12am" --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --abbrev-commit
+  me = !git today --author \"$(git config --get user.name)\"
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -17,3 +19,6 @@
   user = kevinthompson
 [branch]
   autosetuprebase = always
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
