@@ -20,6 +20,7 @@ setopt EXTENDED_GLOB
 setopt auto_cd
 setopt cdablevars
 setopt prompt_subst
+unsetopt nomatch
 
 # History
 HISTSIZE=5000               # How many lines of history to keep in memory
