@@ -26,6 +26,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'wavded/vim-stylus'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Ruby
 Plugin 'thoughtbot/vim-rspec'
