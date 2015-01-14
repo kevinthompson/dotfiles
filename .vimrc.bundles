@@ -58,6 +58,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'DataWraith/auto_mkdir'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
