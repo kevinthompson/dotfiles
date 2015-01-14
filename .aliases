@@ -45,10 +45,10 @@ alias staging="gco staging; gf; git reset --hard origin/staging"
 alias master="gco master; gpl"
 
 # Tmux
-alias tn="tmux new -s"
-alias ta="tmux attach -t"
-alias tl="tmux ls"
-alias tk="tmux kill-session -t"
+alias tn="tmux -S /tmp/pair new -s"
+alias ta="tmux -S /tmp/pair attach -t"
+alias tl="tmux -S /tmp/pair ls"
+alias tk="tmux -S /tmp/pair kill-session -t"
 
 # Apache
 alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"

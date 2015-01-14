@@ -8,9 +8,7 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 " Clipboard
-if $TMUX == ''
-  set clipboard+=unnamed
-end
+set clipboard+=unnamed
 
 " Syntax Highlighting
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
