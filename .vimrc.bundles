@@ -60,6 +60,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'DataWraith/auto_mkdir'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
