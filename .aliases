@@ -52,3 +52,6 @@ alias tk="tmux -S /tmp/pair kill-session -t"
 
 # Apache
 alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
+
+# Misc
+alias x="exercism"
