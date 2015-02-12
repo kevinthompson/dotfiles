@@ -128,6 +128,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.region set filetype=html
   autocmd BufRead,BufNewFile *.item set filetype=html
   autocmd BufRead,BufNewFile *.list set filetype=html
+  autocmd BufRead,BufNewFile *.s set filetype=armasm
 
   " Enable spellchecking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell
