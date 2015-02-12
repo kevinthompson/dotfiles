@@ -42,6 +42,11 @@ snoremap <S-Tab> <esc>i<right><C-r>=snipMate#TriggerSnippet()<CR>
 " Tmux
 nmap <C-c>r <Plug>SetTmuxVars
 
+" Grep
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Git
+
 " Misc.
 map <Leader>h :noh<CR>
 map <Leader>ct :!ctags -R .<CR>
