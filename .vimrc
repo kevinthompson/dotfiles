@@ -129,6 +129,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.item set filetype=html
   autocmd BufRead,BufNewFile *.list set filetype=html
   autocmd BufRead,BufNewFile *.s set filetype=armasm
+  autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
   " Enable spellchecking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell
@@ -136,7 +137,6 @@ augroup vimrcEx
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 augroup END
-
 
 " Fast Escape
 " =============================
@@ -148,13 +148,6 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
-
-
-" Go Lang
-" =============================
-set runtimepath+=$GOROOT/misc/vim
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
 
 " Bindings
 " ==============================

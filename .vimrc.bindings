@@ -36,24 +36,22 @@ imap <buffer> <F4> <Plug>(xmpfilter-mark)
 
 " Tab Completion
 inoremap <Tab> <C-r>=AutocompleteTabWrapper()<CR>
-inoremap <S-Tab> <C-r>=snipMate#TriggerSnippet()<CR>
-snoremap <S-Tab> <esc>i<right><C-r>=snipMate#TriggerSnippet()<CR>
 
 " Tmux
-nmap <C-c>r <Plug>SetTmuxVars
+nmap <C-r>c <Plug>SetTmuxVars
 
 " Grep
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" Git
 
 " Misc.
 map <Leader>h :noh<CR>
 map <Leader>ct :!ctags -R .<CR>
 map <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>:noh<CR>
 map <Leader>' cs"'
+map <Leader>" cs'"
 map <Leader>eb :e ~/.vimrc.bindings<CR>
 map <Leader>ev :e ~/.vimrc<CR>
 map <Leader>gb :Gbrowse<CR>
 map <Leader><Return> :e ~/tmp/scratch<CR>
 map <Leader>= :Tab /=<CR>
+map <Leader>cc :silent !highlight -O rtf % --line-numbers --font-size 24 --font Inconsolata --style solarized-dark -W -J 50 -j 3 --src-lang javascript \| pbcopy<CR>:redraw!<CR>

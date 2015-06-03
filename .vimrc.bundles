@@ -4,31 +4,32 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle Itself
+" Vundle
 Plugin 'gmarik/vundle'
-
-" Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 
 " Syntax Highlighting
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
-Plugin 'alisdair/vim-armasm'
 
-" Syntax Support
-Plugin 'chooh/brightscript.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'wavded/vim-stylus'
+" Utilities
+Plugin 'kien/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'vim-scripts/tComment'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'danro/rename.vim'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'DataWraith/auto_mkdir'
+Plugin 'godlygeek/tabular'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mxw/vim-jsx'
+
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jgdavey/tslime.vim'
 
 " Ruby
 Plugin 'thoughtbot/vim-rspec'
@@ -40,28 +41,6 @@ Plugin 'tpope/vim-rake'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-
-" Go
-Plugin 'jnwhiteh/vim-golang.git'
-
-" Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jgdavey/tslime.vim'
-
-" Utilities
-Plugin 'bling/vim-airline'
-Plugin 'danro/rename.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/tComment'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'DataWraith/auto_mkdir'
-Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
