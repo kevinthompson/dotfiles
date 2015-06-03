@@ -9,7 +9,7 @@
   lg = !git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --abbrev-commit
   me = !git lg --author \"$(git config --get user.name)\"
   today = !git lg --since="12am"
-  cleanup = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+  cleanup = !git fetch origin && git remote prune origin && git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input

@@ -1,6 +1,7 @@
 *.DS_Store
 *.sw[nop]
 .bundle
+.certs
 .env
 db/*.sqlite3
 log/*.log
@@ -13,3 +14,4 @@ zeus.json
 .vim/bundle
 .vim/doc
 .vim/.netrwhist
+source/es6
