@@ -14,7 +14,7 @@ nnoremap <Leader>[ :tp<CR>
 nnoremap <Leader>] :tn<CR>
 
 " Switch between last two files
-nnoremap <leader><leader> <C-^>
+nnoremap <Leader><Leader> <C-^>
 
 " Rspec
 nnoremap <Leader>a :call RunAllSpecs()<CR>
@@ -24,15 +24,6 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 
 " Toggle Relative/Absolute numbers
 nnoremap <C-n> :call NumberToggle()<CR>
-
-" Inline Ruby Processing
-nmap <buffer> <F5> <Plug>(xmpfilter-run)
-xmap <buffer> <F6> <Plug>(xmpfilter-run)
-imap <buffer> <F5> <Plug>(xmpfilter-run)
-
-nmap <buffer> <F4> <Plug>(xmpfilter-mark)
-xmap <buffer> <F4> <Plug>(xmpfilter-mark)
-imap <buffer> <F4> <Plug>(xmpfilter-mark)
 
 " Tab Completion
 inoremap <Tab> <C-r>=AutocompleteTabWrapper()<CR>
@@ -44,14 +35,10 @@ nmap <C-r>c <Plug>SetTmuxVars
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Misc.
+map s :w<CR>
 map <Leader>h :noh<CR>
 map <Leader>ct :!ctags -R .<CR>
-map <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>:noh<CR>
 map <Leader>' cs"'
 map <Leader>" cs'"
-map <Leader>eb :e ~/.vimrc.bindings<CR>
-map <Leader>ev :e ~/.vimrc<CR>
 map <Leader>gb :Gbrowse<CR>
-map <Leader><Return> :e ~/tmp/scratch<CR>
 map <Leader>= :Tab /=<CR>
-map <Leader>cc :silent !highlight -O rtf % --line-numbers --font-size 24 --font Inconsolata --style solarized-dark -W -J 50 -j 3 --src-lang javascript \| pbcopy<CR>:redraw!<CR>

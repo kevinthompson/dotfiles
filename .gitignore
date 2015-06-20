@@ -15,3 +15,4 @@ zeus.json
 .vim/doc
 .vim/.netrwhist
 source/es6
+build

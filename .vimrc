@@ -1,10 +1,9 @@
 " Settings
 " ==============================
-nnoremap <SPACE> <Nop>
 
 " Packages
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/.vimrc.plugins"))
+  source ~/.vimrc.plugins
 endif
 
 " Clipboard
@@ -27,13 +26,12 @@ endif
 
 filetype plugin indent on
 
-let mapleader = " "
+let mapleader=" "
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_theme='solarized'
 let g:html_indent_tags = 'li\|p'
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format documentation {spec}\n")'
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
-let g:snippetsEmu_key = "<S-Tab>"
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -61,6 +59,7 @@ set tabstop=2
 set wildmode=list:longest,list:full
 set textwidth=80
 set colorcolumn=+1
+set relativenumber
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup

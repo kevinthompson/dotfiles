@@ -9,23 +9,18 @@ Plugin 'gmarik/vundle'
 
 " Syntax Highlighting
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/syntastic'
 
 " Utilities
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 'vim-scripts/tComment'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'danro/rename.vim'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/ctags.vim'
-Plugin 'editorconfig/editorconfig-vim'
 Plugin 'DataWraith/auto_mkdir'
 Plugin 'godlygeek/tabular'
-Plugin 'maksimr/vim-jsbeautify'
+Plugin 'bling/vim-airline'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
