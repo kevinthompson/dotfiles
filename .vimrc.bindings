@@ -25,9 +25,6 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 " Toggle Relative/Absolute numbers
 nnoremap <C-n> :call NumberToggle()<CR>
 
-" Tab Completion
-inoremap <Tab> <C-r>=AutocompleteTabWrapper()<CR>
-
 " Tmux
 nmap <C-r>c <Plug>SetTmuxVars
 

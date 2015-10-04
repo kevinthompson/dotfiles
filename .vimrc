@@ -1,6 +1,10 @@
 " Settings
 " ==============================
 
+" Leader
+noremap   <space>    <NOP>
+let mapleader="\<space>"
+
 " Packages
 if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc.plugins
@@ -14,6 +18,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 colorscheme solarized
+filetype plugin indent on
 
 " Use the Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -24,14 +29,12 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-filetype plugin indent on
-
-let mapleader=" "
+" Settings
+let g:enable_bold_font = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_theme='solarized'
 let g:html_indent_tags = 'li\|p'
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format documentation {spec}\n")'
-let g:ruby_path = system('echo $HOME/.rbenv/shims')
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -66,18 +69,7 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
-
 " Functions
-" ==============================
-function! AutocompleteTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-
 function! StripTrailingWhitespace()
   " Don't strip on these filetypes
   if &ft =~ 'markdown'
@@ -95,61 +87,23 @@ function! NumberToggle()
   endif
 endfunc
 
-
 " Auto Commands
-" ==============================
 autocmd QuickFixCmdPost *grep* cwindow
-
-" Remove Trailing Whitespace
 autocmd BufWritePre * call StripTrailingWhitespace()
-
-" Relative Numbers
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-augroup vimrcEx
-  autocmd!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it for commit messages, when the position is invalid, or when
-  " inside an event handler (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile *.conf set filetype=javascript
-  autocmd BufRead,BufNewFile *.region set filetype=html
-  autocmd BufRead,BufNewFile *.item set filetype=html
-  autocmd BufRead,BufNewFile *.list set filetype=html
-  autocmd BufRead,BufNewFile *.s set filetype=armasm
-  autocmd BufRead,BufNewFile *.es6 set filetype=javascript
-
-  " Enable spellchecking for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal spell
-
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-augroup END
-
 " Fast Escape
-" =============================
-if ! has('gui_running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
+"if ! has('gui_running')
+"  set ttimeoutlen=10
+"  augroup FastEscape
+"    autocmd!
+"    au InsertEnter * set timeoutlen=0
+"    au InsertLeave * set timeoutlen=1000
+"  augroup END
+"endif
 
 " Bindings
-" ==============================
 if filereadable(expand("~/.vimrc.bindings"))
   source ~/.vimrc.bindings
 endif
