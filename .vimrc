@@ -90,6 +90,9 @@ endfunc
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
+autocmd! BufWritePost * Neomake
+
+" Relative Numbers
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
