@@ -38,7 +38,6 @@ let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format doc
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 set guifont=Monaco:h12
 set background=dark
