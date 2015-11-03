@@ -92,8 +92,8 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 autocmd! BufWritePost * Neomake
 
 " Relative Numbers
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * set norelativenumber
+autocmd InsertLeave * set relativenumber
 
 " Fast Escape
 "if ! has('gui_running')
