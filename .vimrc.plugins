@@ -10,6 +10,8 @@ Plugin 'gmarik/vundle'
 " Syntax Highlighting
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slim-template/vim-slim'
 
 " Utilities
 "Plugin 'tomtom/tcomment_vim'

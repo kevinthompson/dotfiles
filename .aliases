@@ -26,7 +26,6 @@ alias giv="gem install -v"
 # Rails
 alias lg="tail -f log/development.log"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias m="migrate"
 alias s="rspec"
 
 # Git
@@ -57,3 +56,4 @@ alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
 
 # Misc
 alias x="exercism"
+alias ex="elixir"
