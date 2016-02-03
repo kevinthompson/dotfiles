@@ -12,7 +12,7 @@ compinit
 autoload -U colors
 colors
 export CLICOLOR=1
-export VISUAL="nvim"
+export VISUAL="vim"
 
 # Directory Navigation
 setopt AUTOCD
@@ -33,40 +33,25 @@ setopt sharehistory         # Share history across terminals
 setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 setopt histignoredups
 
-# VI Mode in Terminal
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
-
-# Incremental Search
-bindkey "^R" history-incremental-search-backward
-
-# Readline Keys
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-
-# Keybindings
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A"
-
 # Git Prompt
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    echo " (%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%})"
+    echo " (${ref#refs/heads/})"
   fi
 }
 
 # Prompt
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info) %{$fg_bold[blue]%}$ %{$reset_color%}'
+export PS1='${SSH_CONNECTION+"%{$fg[green]%}%n@%m:"}%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
 
 # Change iTerm2 Profile
 profile() { echo -e "\033]50;SetProfile=$1\a" }
 
+# Bindings
+[[ -f ~/.zsh/bindings ]] && source ~/.zsh/bindings
+
 # Aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.zsh/aliases ]] && source ~/.zsh/aliases
 
 # Local Config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

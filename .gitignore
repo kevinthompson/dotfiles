@@ -17,3 +17,8 @@ zeus.json
 .vim/.netrwhist
 source/es6
 build
+test/reports/**/*
+.vim/**/*
+!.vim/bindings
+!.vim/plugins
+

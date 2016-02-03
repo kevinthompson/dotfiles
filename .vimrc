@@ -6,8 +6,8 @@ noremap   <space>    <NOP>
 let mapleader="\<space>"
 
 " Packages
-if filereadable(expand("~/.vimrc.plugins"))
-  source ~/.vimrc.plugins
+if filereadable(expand("~/.vim/plugins"))
+  source ~/.vim/plugins
 endif
 
 " Clipboard
@@ -106,6 +106,6 @@ autocmd InsertLeave * set relativenumber
 "endif
 
 " Bindings
-if filereadable(expand("~/.vimrc.bindings"))
-  source ~/.vimrc.bindings
+if filereadable(expand("~/.vim/bindings"))
+  source ~/.vim/bindings
 endif
