@@ -12,7 +12,7 @@ compinit
 autoload -U colors
 colors
 export CLICOLOR=1
-export VISUAL="vim"
+export VISUAL="nvim"
 
 # Directory Navigation
 setopt AUTOCD
