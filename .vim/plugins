@@ -12,12 +12,18 @@ Plugin 'altercation/vim-colors-solarized'
 
 " Utilities
 Plugin 'DataWraith/auto_mkdir'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'benekastah/neomake'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'garbas/vim-snipmate'
 Plugin 'godlygeek/tabular'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rbenv'
@@ -41,6 +47,8 @@ Plugin 'vim-ruby/vim-ruby'
 " Syntax Support
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slim-template/vim-slim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

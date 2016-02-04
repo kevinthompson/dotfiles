@@ -38,6 +38,7 @@ let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format doc
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+let g:jsx_ext_required = 0
 
 set guifont=Monaco:h12
 set background=dark
@@ -94,16 +95,6 @@ autocmd! BufWritePost * Neomake
 " Relative Numbers
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
-
-" Fast Escape
-"if ! has('gui_running')
-"  set ttimeoutlen=10
-"  augroup FastEscape
-"    autocmd!
-"    au InsertEnter * set timeoutlen=0
-"    au InsertLeave * set timeoutlen=1000
-"  augroup END
-"endif
 
 " Bindings
 if filereadable(expand("~/.vim/bindings"))
