@@ -1,6 +1,3 @@
-# Functions
-fpath=(/Users/kevinthompson/code/zsh-completions/src $fpath)
-
 # Enable Completion
 autoload -U compinit
 compinit
@@ -17,11 +14,15 @@ export VISUAL="nvim"
 # Directory Navigation
 setopt AUTOCD
 setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-setopt EXTENDED_GLOB
 setopt auto_cd
 setopt cdablevars
 setopt prompt_subst
 unsetopt nomatch
+
+# Completion
+setopt EXTENDED_GLOB
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 
 # History
 HISTSIZE=5000               # How many lines of history to keep in memory
