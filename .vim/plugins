@@ -50,6 +50,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-haml'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
