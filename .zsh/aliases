@@ -42,7 +42,7 @@ alias gpr="git pull-request"
 alias gbr="git browse"
 alias gl="git log --pretty=oneline --abbrev-commit"
 alias gt="!git clone --depth 1 --origin source"
-alias staging="gco staging; gf; git reset --hard origin/staging"
+alias staging="gco staging; gf origin staging; git reset --hard origin/staging"
 alias master="gco master; gpl"
 
 # Tmux
