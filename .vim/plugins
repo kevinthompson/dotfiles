@@ -49,7 +49,6 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'slim-template/vim-slim'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-haml'
 
 call vundle#end()            " required
