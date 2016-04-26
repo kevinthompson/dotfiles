@@ -41,7 +41,7 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:jsx_ext_required = 0
 
 set guifont=Monaco:h12
-set background=dark
+set background=light
 set complete=.,w,t
 set expandtab
 set hidden
