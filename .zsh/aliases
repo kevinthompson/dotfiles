@@ -54,6 +54,13 @@ alias tk="tmux -S /tmp/pair kill-session -t"
 # Apache
 alias vhosts="v /etc/apache2/extra/httpd-vhosts.conf"
 
+# PCO Box
+alias pb="pco box"
+alias pba="pco box apprestart"
+alias pbc="pco box rails c"
+alias pbb="pco box bundle"
+alias pbm="pco box rake db:migrate"
+
 # Misc
 alias x="exercism"
 alias ex="elixir"

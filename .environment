@@ -5,6 +5,7 @@ export PATH="$HOME/code/android-sdk/sdk/platform-tools:$PATH" # Homebrew
 export PATH="/usr/local/share/npm/bin:$PATH"                  # Node
 export PATH="$GOPATH/bin:$PATH"                               # Go
 export PATH="$HOME/.bin:$PATH"                                # Custom Binaries
+export PATH="$HOME/.local/bin:$PATH"                          # Custom Binaries
 
 # Define Editor
 export VISUAL=vim
