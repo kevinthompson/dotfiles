@@ -1,12 +1,10 @@
 # Enable Completion
+fpath=(~/.zsh/completion $fpath)
 autoload -U compinit
 compinit
 
 # Environment
 [[ -f ~/.environment ]] && source ~/.environment
-
-# Path
-fpath=(~/.zsh/completion $fpath)
 
 # Enable Colors
 autoload -U colors
