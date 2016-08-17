@@ -1,6 +1,6 @@
 # Enable Completion
 fpath=(~/.zsh/completion $fpath)
-autoload -U compinit
+rm -f ~/.zcompdump
 compinit
 
 # Environment
