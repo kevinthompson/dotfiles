@@ -7,9 +7,10 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Color Schemes
-Plug 'hhsnopek/vim-firewatch'
+Plug 'joshdick/onedark.vim'
 
 " Utilities
+Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'

@@ -17,7 +17,11 @@ set clipboard+=unnamed
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-colorscheme firewatch
+
+let g:onedark_termcolors=16
+colorscheme onedark
+set background=dark
+set guifont="Roboto Mono":h13
 filetype plugin indent on
 
 " Use the Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -38,10 +42,8 @@ let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:jsx_ext_required = 0
-let g:airline_theme="molokai"
+let g:lightline = { 'colorscheme': 'onedark' }
 
-set background=dark
-set guifont="Roboto Mono":h12
 set complete=.,w,t
 set expandtab
 set hidden
