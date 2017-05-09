@@ -29,6 +29,7 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <C-n> :call NumberToggle()<CR>
 
 " Tmux
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 nmap <C-r>c <Plug>SetTmuxVars
 
 " Grep
