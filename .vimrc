@@ -14,11 +14,8 @@ endif
 set clipboard+=unnamed
 
 " Syntax Highlighting
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
-
 let g:onedark_termcolors=16
+syntax on
 colorscheme onedark
 set background=dark
 set guifont="Roboto Mono":h13
@@ -36,13 +33,17 @@ endif
 " Settings
 let g:enable_bold_font = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:html_indent_tags = 'li\|p'
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format documentation {spec}\n")'
-let g:solarized_termtrans=1
-let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-let g:jsx_ext_required = 0
 let g:lightline = { 'colorscheme': 'onedark' }
+
+" Testing
+function! BoxTransform(cmd) abort
+  return 'box '.a:cmd
+endfunction
+
+let g:test#custom_transformations = {'box': function('BoxTransform')}
+let g:test#transformation = 'box'
+let test#strategy = 'tslime'
 
 set complete=.,w,t
 set expandtab
@@ -64,7 +65,6 @@ set tabstop=2
 set wildmode=list:longest,list:full
 set textwidth=80
 set colorcolumn=+1
-set relativenumber
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup

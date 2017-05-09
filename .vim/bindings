@@ -20,10 +20,11 @@ nnoremap <Leader><Leader> <C-^>
 nnoremap <Leader>e :!elixir %<CR>
 
 " Rspec
-nnoremap <Leader>a :call RunAllSpecs()<CR>
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 " Toggle Relative/Absolute numbers
 nnoremap <C-n> :call NumberToggle()<CR>
