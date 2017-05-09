@@ -21,19 +21,16 @@ set background=dark
 set guifont="Roboto Mono":h13
 filetype plugin indent on
 
-" Use the Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " use ag in ctrlp for listing files. lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" Search
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
 endif
 
+set wildignore+=*/.git/*,*/tmp/*,*.swp,*/node_modules/*
+
 " Settings
-let g:enable_bold_font = 1
-let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:lightline = { 'colorscheme': 'onedark' }
 
 " Testing
@@ -92,10 +89,6 @@ endfunc
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
-
-" Relative Numbers
-autocmd InsertEnter * set norelativenumber
-autocmd InsertLeave * set relativenumber
 
 " Neomake
 autocmd! BufWritePost * Neomake

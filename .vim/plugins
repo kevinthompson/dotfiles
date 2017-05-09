@@ -19,8 +19,10 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'rizzatti/dash.vim'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
