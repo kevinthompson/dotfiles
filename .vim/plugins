@@ -9,13 +9,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Color Schemes
 Plugin 'flazz/vim-colorschemes'
+Plugin 'hhsnopek/vim-firewatch'
 
 " Utilities
 Plugin 'DataWraith/auto_mkdir'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'benekastah/neomake'
+Plugin 'neomake/neomake'
+Plugin 'benjie/neomake-local-eslint.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
@@ -50,6 +52,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-haml'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

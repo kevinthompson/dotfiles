@@ -17,7 +17,7 @@ set clipboard+=unnamed
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-colorscheme solarized
+colorscheme firewatch
 filetype plugin indent on
 
 " Use the Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -32,16 +32,16 @@ endif
 " Settings
 let g:enable_bold_font = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:airline_theme='solarized'
 let g:html_indent_tags = 'li\|p'
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec --color --format documentation {spec}\n")'
 let g:solarized_termtrans=1
 let g:syntastic_check_on_open=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:jsx_ext_required = 0
+let g:airline_theme="molokai"
 
-set guifont=Monaco:h12
-set background=light
+set background=dark
+set guifont="Roboto Mono":h12
 set complete=.,w,t
 set expandtab
 set hidden
@@ -90,11 +90,15 @@ endfunc
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd! BufWritePost * Neomake
 
 " Relative Numbers
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
+
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
 
 " Bindings
 if filereadable(expand("~/.vim/bindings"))

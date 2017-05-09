@@ -4,6 +4,7 @@
 .certs
 .env
 .powenv
+.zshrc.local
 db/*.sqlite3
 log/*.log
 rerun.txt

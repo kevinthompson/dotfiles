@@ -1,6 +1,7 @@
 # Enable Completion
 fpath=(~/.zsh/completion $fpath)
 rm -f ~/.zcompdump
+autoload -U compinit
 compinit
 
 # Environment
@@ -57,4 +58,3 @@ profile() { echo -e "\033]50;SetProfile=$1\a" }
 
 # Local Config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-export NVM_DIR=~/.nvm  && . $(brew --prefix nvm)/nvm.sh
