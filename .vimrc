@@ -28,7 +28,7 @@ if executable('rg')
   let g:ctrlp_use_caching = 0
 endif
 
-set wildignore+=*/.git/*,*/tmp/*,*.swp,*/node_modules/*
+set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 
 " Settings
 let g:lightline = { 'colorscheme': 'onedark' }
@@ -62,6 +62,7 @@ set tabstop=2
 set wildmode=list:longest,list:full
 set textwidth=80
 set colorcolumn=+1
+set tags=tags;~
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
