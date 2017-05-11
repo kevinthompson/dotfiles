@@ -44,6 +44,9 @@ git_prompt_info() {
   fi
 }
 
+# PATH
+export PATH=$PATH:~/.cargo/bin
+
 # Prompt
 export PS1='${SSH_CONNECTION+"%{$fg[green]%}%n@%m:"}%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
 
