@@ -7,6 +7,9 @@ compinit
 # Environment
 [[ -f ~/.environment ]] && source ~/.environment
 
+# Path
+export PATH=$PATH:/Users/kevinthompson/.cargo/bin
+
 # Enable Colors
 autoload -U colors
 colors
