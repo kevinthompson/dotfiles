@@ -56,6 +56,9 @@ export PS1='${SSH_CONNECTION+"%{$fg[green]%}%n@%m:"}%{$fg[blue]%}%~%{$reset_colo
 # Change iTerm2 Profile
 profile() { echo -e "\033]50;SetProfile=$1\a" }
 
+# FZF
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+
 # Bindings
 [[ -f ~/.zsh/bindings ]] && source ~/.zsh/bindings
 

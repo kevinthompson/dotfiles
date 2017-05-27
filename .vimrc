@@ -20,6 +20,7 @@ colorscheme onedark
 set background=dark
 set guifont="Roboto Mono":h13
 filetype plugin indent on
+set foldmethod=manual
 
 " Javascript
 let g:javascript_plugin_flow = 1
@@ -27,13 +28,9 @@ let g:jsx_ext_required = 0
 
 " Search
 if executable('rg')
-  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepprg=rg\ --vimgrep\ --no-heading\ --hidden\ --smart-case"
   set grepformat=%f:%l:%c:%m,%f:%l:%m
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
 endif
-
-let g:ackprg = 'rg --vimgrep --no-heading'
 
 set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 

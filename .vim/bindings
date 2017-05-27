@@ -9,6 +9,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
+" Search
+nnoremap <C-P> :Files<CR>
+
 " Navigation
 nnoremap <Leader>[ :tp<CR>
 nnoremap <Leader>] :tn<CR>

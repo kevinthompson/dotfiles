@@ -14,7 +14,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
@@ -24,6 +23,10 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'rizzatti/dash.vim'
+
+" Fuzzy Search
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -38,6 +41,5 @@ Plug 'vim-ruby/vim-ruby'
 " Syntax Support
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
-Plug 'leshill/vim-json'
 
 call plug#end()
