@@ -21,6 +21,10 @@ set background=dark
 set guifont="Roboto Mono":h13
 filetype plugin indent on
 
+" Javascript
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+
 " Search
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading

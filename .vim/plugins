@@ -37,5 +37,7 @@ Plug 'vim-ruby/vim-ruby'
 
 " Syntax Support
 Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'leshill/vim-json'
 
 call plug#end()
