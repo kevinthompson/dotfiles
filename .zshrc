@@ -51,7 +51,7 @@ git_prompt_info() {
 export PATH=$PATH:~/.cargo/bin
 
 # Prompt
-export PS1='${SSH_CONNECTION+"%{$fg[green]%}%n@%m:"}%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
+export PS1='%{$fg[blue]%}%1~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
 
 # Change iTerm2 Profile
 profile() { echo -e "\033]50;SetProfile=$1\a" }

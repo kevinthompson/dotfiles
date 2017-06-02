@@ -29,8 +29,8 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-" Toggle Relative/Absolute numbers
-nnoremap <C-n> :call NumberToggle()<CR>
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 " Tmux
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>

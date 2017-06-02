@@ -34,8 +34,21 @@ endif
 
 set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 
-" Settings
-let g:lightline = { 'colorscheme': 'onedark' }
+" Lightline
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \   'active': {
+  \     'left': [
+  \       ['mode', 'paste'],
+  \       ['filename']
+  \     ],
+  \     'right': [
+  \       ['lineinfo'],
+  \       ['percent'],
+  \       ['filetype']
+  \     ]
+  \   }
+  \}
 
 " Testing
 function! BoxTransform(cmd) abort
@@ -94,6 +107,10 @@ endfunc
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
+
+" Nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Neomake
 autocmd! BufWritePost * Neomake
