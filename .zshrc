@@ -7,9 +7,6 @@ compinit
 # Environment
 [[ -f ~/.environment ]] && source ~/.environment
 
-# Path
-export PATH=$PATH:/Users/kevinthompson/.cargo/bin
-
 # Enable Colors
 autoload -U colors
 colors
@@ -49,6 +46,7 @@ git_prompt_info() {
 
 # PATH
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:/Users/kevinthompson/.cargo/bin
 
 # Prompt
 export PS1='%{$fg[blue]%}%1~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
