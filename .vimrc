@@ -143,13 +143,14 @@ augroup END
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 function! ReindexCtags()
-  let l:ctags_hook = '$(git rev-parse --show-toplevel)/.git/hooks/ctags'
+  let l:ctags_root = system('git rev-parse --show-toplevel')[:-2]
+  let l:ctags_hook = l:ctags_root. '/.git/hooks/ctags'
 
-  if exists(l:ctags_hook)
+  if filereadable(l:ctags_hook)
     exec '!'. l:ctags_hook
   else
     exec "!ctags -R ."
   endif
 endfunction
 
-nmap <Leader>ct :call ReindexCtags()<CR>
+nmap <Leader>ct :call ReindexCtags()<CR><CR>
