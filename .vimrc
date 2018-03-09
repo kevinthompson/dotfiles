@@ -13,6 +13,10 @@ endif
 " Clipboard
 set clipboard+=unnamed
 
+" Git Gutter
+let g:gitgutter_realtime=1
+set updatetime=250
+
 " Syntax Highlighting
 let g:onedark_termcolors=16
 syntax on
@@ -25,6 +29,13 @@ set foldmethod=manual
 " Javascript
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
+
+" Markdown
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_folding_disabled = 1
+
+" Completion
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Search
 if executable('rg')
@@ -40,7 +51,7 @@ let g:lightline = {
   \   'active': {
   \     'left': [
   \       ['mode', 'paste'],
-  \       ['filename']
+  \       ['relativepath']
   \     ],
   \     'right': [
   \       ['lineinfo'],
@@ -51,12 +62,6 @@ let g:lightline = {
   \}
 
 " Testing
-function! BoxTransform(cmd) abort
-  return 'box '.a:cmd
-endfunction
-
-let g:test#custom_transformations = {'box': function('BoxTransform')}
-let g:test#transformation = 'box'
 let test#strategy = 'tslime'
 
 set complete=.,w,t
@@ -70,16 +75,17 @@ set list listchars=tab:»·,trail:·
 set nowrap
 set number
 set numberwidth=5
-set ruler         " show the cursor position all the time
 set shiftwidth=2
 set showcmd       " display incomplete commands
 set splitbelow
 set splitright
 set tabstop=2
 set wildmode=list:longest,list:full
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 set tags=tags;~
+set noshowmode
+set noruler
 
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
@@ -117,7 +123,17 @@ autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 
+" Rubocop and eslint autofix
+autocmd FileType javascript map <silent> <buffer> <leader>p :NeomakeSh!eslint --fix %<CR>:sleep 1<CR>:e<CR>
+autocmd FileType ruby map <silent> <buffer> <leader>p :NeomakeSh!rubocop --auto-correct %<CR>:sleep 1<CR>:e<CR>
+autocmd! BufWritePost,BufEnter * Neomake
+
 " Bindings
 if filereadable(expand("~/.vim/bindings"))
   source ~/.vim/bindings
 endif
+
+" Filetypes
+augroup filetypedetect
+  au BufRead,BufNewFile *.p8 setfiletype lua
+augroup END

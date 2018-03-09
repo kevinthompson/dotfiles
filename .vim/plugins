@@ -18,12 +18,13 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'godlygeek/tabular'
 
 " Fuzzy Search
 Plug '/usr/local/opt/fzf'
@@ -35,8 +36,9 @@ Plug 'jgdavey/tslime.vim'
 
 " Ruby
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
 
 " Syntax Support

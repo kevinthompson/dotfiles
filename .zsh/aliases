@@ -29,6 +29,7 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 
 # Git
+alias g="git"
 alias gs="git status"
 alias gps="git push"
 alias gpl="git fetch && git pull --rebase"

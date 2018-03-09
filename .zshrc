@@ -7,6 +7,9 @@ compinit
 # Environment
 [[ -f ~/.environment ]] && source ~/.environment
 
+# Node
+export NODE_ENV="development"
+
 # Enable Colors
 autoload -U colors
 colors
@@ -44,10 +47,6 @@ git_prompt_info() {
   fi
 }
 
-# PATH
-export PATH=$PATH:~/.cargo/bin
-export PATH=$PATH:/Users/kevinthompson/.cargo/bin
-
 # Prompt
 export PS1='%{$fg[blue]%}%1~%{$reset_color%}$(git_prompt_info) %{$fg[blue]%}$ %{$reset_color%}'
 
@@ -65,3 +64,18 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 
 # Local Config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# PATH
+export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:/Users/kevinthompson/.cargo/bin
+export PATH=$PATH:./node_modules/.bin
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=/Users/kevinthompson/pco-box/bin:/usr/local/bin:$PATH
+export PATH="bin:$PATH"
+
+# Misc.
+export RBENV_ROOT=$HOME/.rbenv
+export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
+export MYSQL_SLAVE_PORT_3306_TCP_ADDR=127.0.0.1
+export MYSQL_SLAVE_PORT_3306_TCP_PORT=3307
+eval "$(rbenv init -)"

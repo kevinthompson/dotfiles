@@ -3,7 +3,9 @@
 .bundle
 .certs
 .env
+.npm-debug.log
 .powenv
+.vscode
 .zshrc.local
 db/*.sqlite3
 log/*.log
@@ -17,8 +19,8 @@ zeus.json
 .vim/doc
 .vim/.netrwhist
 source/es6
-build
 test/reports/**/*
+yarn-error.log
 .vim/**/*
 !.vim/bindings
 !.vim/plugins

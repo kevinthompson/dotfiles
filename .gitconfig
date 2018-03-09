@@ -5,6 +5,8 @@
 [color]
   ui = auto
 [alias]
+  co = !git checkout
+  m = !git merge
   up = !git fetch origin && git rebase origin/master
   lg = !git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --abbrev-commit
   me = !git lg --author \"$(git config --get user.name)\"
