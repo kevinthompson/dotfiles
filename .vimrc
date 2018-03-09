@@ -35,7 +35,7 @@ let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_folding_disabled = 1
 
 " Completion
-let g:ycm_collect_identifiers_from_tags_files = 1
+let g:deoplete#enable_at_startup = 1
 
 " Search
 if executable('rg')
@@ -137,3 +137,18 @@ endif
 augroup filetypedetect
   au BufRead,BufNewFile *.p8 setfiletype lua
 augroup END
+
+" CTags
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
+function! ReindexCtags()
+  let l:ctags_hook = '$(git rev-parse --show-toplevel)/.git/hooks/ctags'
+
+  if exists(l:ctags_hook)
+    exec '!'. l:ctags_hook
+  else
+    exec "!ctags -R ."
+  endif
+endfunction
+
+nmap <Leader>ct :call ReindexCtags()<CR>

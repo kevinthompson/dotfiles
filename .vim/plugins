@@ -25,6 +25,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Fuzzy Search
 Plug '/usr/local/opt/fzf'
