@@ -35,6 +35,7 @@ let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_folding_disabled = 1
 
 " Completion
+let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_at_startup = 1
 
 " Search
