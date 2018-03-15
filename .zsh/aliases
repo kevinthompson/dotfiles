@@ -26,20 +26,13 @@ alias giv="gem install -v"
 # Rails
 alias lg="tail -f log/development.log"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias update="echo 'Installing gems...\c'; \
-  bundle install > /dev/null; \
-  echo '\n\c'; \
-  echo 'Running migrations...\c'; \
-  rake db:migrate > /dev/null; \
-  gco HEAD db/structure.sql > /dev/null"; \
-  echo '\n\c'
 alias s="rspec"
 
 # Git
 alias g="git"
 alias gs="git status"
 alias gps="git push"
-alias gpl="git fetch && git pull --rebase; update"
+alias gpl="git fetch && git pull --rebase"
 alias gb="git branch"
 alias gf="git fetch"
 alias gd="git diff"
