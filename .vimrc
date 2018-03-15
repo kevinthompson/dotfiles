@@ -18,11 +18,21 @@ let g:gitgutter_realtime=1
 set updatetime=250
 
 " Syntax Highlighting
-let g:onedark_termcolors=16
-syntax on
-colorscheme onedark
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 set background=dark
-set guifont="Roboto Mono":h13
+
+syntax enable
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+
+" Font
+set guifont="Roboto Mono":h14
+
+" Formatting
 filetype plugin indent on
 set foldmethod=manual
 
@@ -48,7 +58,7 @@ set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 
 " Lightline
 let g:lightline = {
-  \ 'colorscheme': 'onedark',
+  \ 'colorscheme': 'oceanicnext',
   \   'active': {
   \     'left': [
   \       ['mode', 'paste'],
