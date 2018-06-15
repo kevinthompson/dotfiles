@@ -24,8 +24,12 @@ endif
 
 set background=dark
 
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
+
 syntax enable
-" let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
 colorscheme OceanicNext
 
@@ -92,7 +96,7 @@ set splitbelow
 set splitright
 set tabstop=2
 set wildmode=list:longest,list:full
-set textwidth=120
+set textwidth=80
 set colorcolumn=+1
 set tags=tags;~
 set noshowmode
@@ -124,10 +128,6 @@ endfunc
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
-
-" Nerdtree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Neomake
 autocmd! BufWritePost * Neomake
@@ -164,3 +164,16 @@ function! ReindexCtags()
 endfunction
 
 nmap <Leader>ct :call ReindexCtags()<CR><CR>
+
+" Pasting
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+
+function! s:Repl()
+    let s:restore_reg = @"
+    return "p@=RestoreRegister()\<cr>"
+endfunction
+
+vnoremap <silent> <expr> p <sid>Repl()

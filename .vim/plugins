@@ -6,9 +6,6 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-" Color Schemes
-Plug 'mhartington/oceanic-next'
-
 " Utilities
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
@@ -40,7 +37,11 @@ Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
 
 " Syntax Support
-Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
+Plug 'othree/yajs.vim', {'for': ['javascript']}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript']}
+Plug 'mxw/vim-jsx'
+
+" Color Schemes
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
