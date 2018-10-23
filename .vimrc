@@ -66,6 +66,7 @@ let g:lightline = {
   \   'active': {
   \     'left': [
   \       ['mode', 'paste'],
+  \       ['gitbranch'],
   \       ['relativepath']
   \     ],
   \     'right': [
@@ -73,6 +74,9 @@ let g:lightline = {
   \       ['percent'],
   \       ['filetype']
   \     ]
+  \   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head'
   \   }
   \}
 
