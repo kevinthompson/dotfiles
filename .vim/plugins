@@ -24,10 +24,7 @@ Plug 'godlygeek/tabular'
 " Fuzzy Search
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-
-" Tmux
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'jgdavey/tslime.vim'
+Plug '/usr/local/opt/fzf'
 
 " Ruby
 Plug 'tpope/vim-bundler'
@@ -42,6 +39,6 @@ Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript']}
 Plug 'mxw/vim-jsx'
 
 " Color Schemes
-Plug 'mhartington/oceanic-next'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()

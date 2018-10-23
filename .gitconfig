@@ -16,8 +16,8 @@
   excludesfile = ~/.gitignore
   autocrlf = input
 [user]
-  name = Kevin Thompson
-  email = kevin@kevinthompson.info
+	name = Kevin Thompson
+	email = kevin@kevinthompson.info
 [github]
   user = kevinthompson
 [branch]

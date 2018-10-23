@@ -21,3 +21,5 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\
 
 # VI Mode
 set -o vi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

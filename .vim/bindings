@@ -32,10 +32,6 @@ nmap <silent> <leader>g :TestVisit<CR>
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-" Tmux
-nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
-nmap <C-r>c <Plug>SetTmuxVars
-
 " Grep
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 

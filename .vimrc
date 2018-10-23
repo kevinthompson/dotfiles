@@ -17,28 +17,15 @@ set clipboard+=unnamed
 let g:gitgutter_realtime=1
 set updatetime=250
 
-" Syntax Highlighting
-if (has("termguicolors"))
-  set termguicolors
-endif
-
+" Syntax
+syntax on
 set background=dark
-
-if $TERM == "xterm-256color"
-  set t_Co=256
-endif
-
-syntax enable
-let g:oceanic_next_terminal_bold = 1
-" let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
-
-" Font
-set guifont="Roboto Mono":h14
+let g:onedark_termcolors=16
+colorscheme onedark
 
 " Formatting
 filetype plugin indent on
-set foldmethod=manual
+set nofoldenable
 
 " Javascript
 let g:javascript_plugin_flow = 1
@@ -46,23 +33,19 @@ let g:jsx_ext_required = 0
 
 " Markdown
 let g:vim_markdown_follow_anchor = 1
-let g:vim_markdown_folding_disabled = 1
 
 " Completion
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_at_startup = 1
 
 " Search
-if executable('rg')
-  set grepprg=rg\ --vimgrep\ --no-heading\ --hidden\ --smart-case"
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
-
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+set grepprg=rg\ --vimgrep
 set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 
 " Lightline
 let g:lightline = {
-  \ 'colorscheme': 'oceanicnext',
+  \ 'colorscheme': 'onedark',
   \   'active': {
   \     'left': [
   \       ['mode', 'paste'],
@@ -75,9 +58,6 @@ let g:lightline = {
   \     ]
   \   }
   \}
-
-" Testing
-let test#strategy = 'tslime'
 
 set complete=.,w,t
 set expandtab
@@ -116,15 +96,6 @@ function! StripTrailingWhitespace()
   %s/\s\+$//e
 endfun
 
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-
 " Auto Commands
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
@@ -143,37 +114,3 @@ autocmd! BufWritePost,BufEnter * Neomake
 if filereadable(expand("~/.vim/bindings"))
   source ~/.vim/bindings
 endif
-
-" Filetypes
-augroup filetypedetect
-  au BufRead,BufNewFile *.p8 setfiletype lua
-augroup END
-
-" CTags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-function! ReindexCtags()
-  let l:ctags_root = system('git rev-parse --show-toplevel')[:-2]
-  let l:ctags_hook = l:ctags_root. '/.git/hooks/ctags'
-
-  if filereadable(l:ctags_hook)
-    exec '!'. l:ctags_hook
-  else
-    exec "!ctags -R ."
-  endif
-endfunction
-
-nmap <Leader>ct :call ReindexCtags()<CR><CR>
-
-" Pasting
-function! RestoreRegister()
-  let @" = s:restore_reg
-  return ''
-endfunction
-
-function! s:Repl()
-    let s:restore_reg = @"
-    return "p@=RestoreRegister()\<cr>"
-endfunction
-
-vnoremap <silent> <expr> p <sid>Repl()

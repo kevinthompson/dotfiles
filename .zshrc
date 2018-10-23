@@ -71,6 +71,7 @@ export PATH=$PATH:/Users/kevinthompson/.cargo/bin
 export PATH=$PATH:./node_modules/.bin
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=/Users/kevinthompson/pco-box/bin:/usr/local/bin:$PATH
+export PATH="bin:$PATH"
 
 # Misc.
 export RBENV_ROOT=$HOME/.rbenv
@@ -79,5 +80,4 @@ export MYSQL_SLAVE_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_SLAVE_PORT_3306_TCP_PORT=3307
 eval "$(rbenv init -)"
 
-# Local Path
-export PATH="bin:$PATH"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
