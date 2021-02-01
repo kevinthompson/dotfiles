@@ -9,8 +9,7 @@ call plug#begin('~/.vim/bundle')
 " Utilities
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
-Plug 'neomake/neomake'
-Plug 'benjie/neomake-local-eslint.vim'
+Plug 'w0rp/ale'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
@@ -37,6 +36,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'othree/yajs.vim', {'for': ['javascript']}
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript']}
 Plug 'mxw/vim-jsx'
+Plug 'tbastos/vim-lua'
+Plug 'slim-template/vim-slim'
 
 " Color Schemes
 Plug 'joshdick/onedark.vim'

@@ -43,6 +43,7 @@ alias gpr="git pull-request"
 alias gbr="git browse"
 alias gl="git log --pretty=oneline --abbrev-commit"
 alias gt="!git clone --depth 1 --origin source"
+alias gg="git rev-list --all | xargs git grep"
 alias staging="gco staging; gf origin staging; git reset --hard origin/staging"
 alias master="gco master; gpl"
 
@@ -65,3 +66,4 @@ alias pbm="pco box rake db:migrate"
 # Misc
 alias x="exercism"
 alias ex="elixir"
+alias love="/Applications/love.app/Contents/MacOS/love"

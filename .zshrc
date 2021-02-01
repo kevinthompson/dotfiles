@@ -81,3 +81,7 @@ export MYSQL_SLAVE_PORT_3306_TCP_PORT=3307
 eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
+export MYSQL_READER_PORT_3306_TCP_PORT=3307
+
+export BUNDLER_EDITOR="code"

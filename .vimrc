@@ -121,15 +121,29 @@ endfun
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * call StripTrailingWhitespace()
 
-" Neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
+augroup p8_ft
+  au!
+  autocmd BufNewFile,BufRead *.p8   set syntax=lua
+augroup END
 
 " Rubocop and eslint autofix
-autocmd FileType javascript map <silent> <buffer> <leader>p :NeomakeSh!eslint --fix %<CR>:sleep 1<CR>:e<CR>
-autocmd FileType ruby map <silent> <buffer> <leader>p :NeomakeSh!rubocop --auto-correct %<CR>:sleep 1<CR>:e<CR>
-autocmd! BufWritePost,BufEnter * Neomake
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+map <leader>f :ALEFix<CR>
+
+" Allow picking the fixer in each directory
+set exrc
+
+" let g:ale_completion_enabled = 1
+nnoremap <leader>d :ALEGoToDefinition<CR>
+
+" Show rubocop rule explanation
+let g:ale_ruby_rubocop_options = '--display-style-guide'
+" mnemonic for go (to) ale detail
+nnoremap <leader>gad :ALEDetail<CR>
 
 " Bindings
 if filereadable(expand("~/.vim/bindings"))
