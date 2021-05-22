@@ -66,12 +66,18 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # Path
+export PATH=$PATH:/Applications/love.app/Contents/MacOS
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:/Users/kevinthompson/.cargo/bin
 export PATH=$PATH:./node_modules/.bin
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=/Users/kevinthompson/pco-box/bin:/usr/local/bin:$PATH
 export PATH="bin:$PATH"
+export SNDCPY_HOME="$HOME/Applications/Android/sndcpy"
+export SNDCPY_APK="$HOME/Applications/Android/sndcpy/sndcpy.apk"
+export PATH="$SNDCPY_HOME/:$PATH"
+alias sndcpy="sh sndcpy"
+alias quest="scrcpy -c1280:720:100:400 -b4M -m720"
 
 # Misc.
 export RBENV_ROOT=$HOME/.rbenv

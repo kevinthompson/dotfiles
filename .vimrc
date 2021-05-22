@@ -149,3 +149,5 @@ nnoremap <leader>gad :ALEDetail<CR>
 if filereadable(expand("~/.vim/bindings"))
   source ~/.vim/bindings
 endif
+
+"imap <S-BS> ^H

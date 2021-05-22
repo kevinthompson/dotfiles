@@ -3,6 +3,8 @@ if [ -f ~/.bashrc ]; then
 fi
 eval $(/usr/libexec/path_helper -s)
 
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 export PATH="$HOME/.cargo/bin:$PATH"
 export RBENV_ROOT=$HOME/.rbenv
 export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
