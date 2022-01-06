@@ -38,7 +38,7 @@ set updatetime=250
 " Syntax
 syntax on
 set background=dark
-colorscheme onedark
+colorscheme cobalt2
 
 " Formatting
 filetype plugin indent on
@@ -62,7 +62,7 @@ set wildignore+=*/tmp/*,*.swp,*/node_modules/*
 
 " Lightline
 let g:lightline = {
-  \ 'colorscheme': 'onedark',
+  \ 'colorscheme': 'cobalt2',
   \   'active': {
   \     'left': [
   \       ['mode', 'paste'],

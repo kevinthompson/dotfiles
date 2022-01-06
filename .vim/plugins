@@ -41,5 +41,7 @@ Plug 'slim-template/vim-slim'
 
 " Color Schemes
 Plug 'joshdick/onedark.vim'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'pwntester/cobalt2.vim'
 
 call plug#end()

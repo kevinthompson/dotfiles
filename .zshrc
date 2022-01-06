@@ -91,3 +91,6 @@ export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_PORT=3307
 
 export BUNDLER_EDITOR="code"
+
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
