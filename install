@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ~/.dotfiles
+
+files=$(git ls-tree HEAD | cut -f2 | grep -v "install$")
+
+for file in $files; do
+  if [[ -L ~/$file ]]; then rm ~/$file; fi
+  echo "Creating symlink to $file in home directory..."
+  ln -s ~/.dotfiles/$file ~/$file
+done
+
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
