@@ -19,6 +19,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
+$ruby\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
 $conda\
@@ -141,6 +142,11 @@ symbol = ""
 style = "bg:color_blue"
 format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
+[ruby]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
 [docker_context]
 symbol = ""
 style = "bg:color_bg3"
@@ -152,9 +158,10 @@ format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [time]
 disabled = false
-time_format = "%R"
+use_12hr = true
 style = "bg:color_bg1"
 format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+# time_format = "%R"
 
 [line_break]
 disabled = false
