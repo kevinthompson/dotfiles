@@ -1,5 +1,41 @@
 #!/bin/bash
 
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# enable homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# install brew libraries
+brew install bat
+brew install cmake
+brew install eza
+brew install lazygit
+brew install luarocks
+brew install neovim
+brew install ninja
+brew install node
+brew install rbenv
+brew install ripgrep
+brew install starship
+brew install tmux
+brew install wget
+brew install zoxide
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+
+# install brew applications
+brew install --cask discord 
+brew install --cask logitech-g-hub
+brew install --cask font-meslo-lg-nerd-font
+brew install --cask raycast 
+brew install --cask wezterm
+
+# setup tmux
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# copy over dotfiles
 cd ~/.dotfiles
 
 files=$(git ls-tree HEAD | cut -f2 | grep -v "install$")
@@ -13,3 +49,7 @@ done
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+
+# install xcode
+xcode-select --install
+sudo xcode-select -s /Applications/Xcode.app
