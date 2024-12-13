@@ -26,7 +26,6 @@ brew install zsh-syntax-highlighting
 
 # install brew applications
 brew install --cask discord 
-brew install --cask logitech-g-hub
 brew install --cask font-meslo-lg-nerd-font
 brew install --cask raycast 
 brew install --cask wezterm
