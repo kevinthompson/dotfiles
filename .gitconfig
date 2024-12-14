@@ -1,3 +1,7 @@
 [user]
 	name = Kevin Thompson
 	email = email@kevinthompson.info
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
